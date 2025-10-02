@@ -1,24 +1,32 @@
-﻿<Window x:Class="Hemuppgift_WPFtemplate.MainWindow"
+﻿<Window x:Class="Hemuppgift_WPFtemplate.GridWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hemuppgift_WPFtemplate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="GridWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="gridBtn" Content="Grid" Grid.Column="0" Grid.Row="0" Click="gridBtn_Click"/>
-        <Button x:Name="stackPanelBtn" Content="StackPanel" Grid.Column="1" Grid.Row="0"/>
-        <Button x:Name="wrapPanelBtn" Content="WrapPanel" Grid.Column="0" Grid.Row="1"/>
-        <Button x:Name="dockPanelBtn" Content="DockPanel" Grid.Column="1" Grid.Row="1"/>
 
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <TextBlock Text="Row"/>
+            <TextBox x:Name="rowBox" Width="50"/>
+            <TextBlock Text="Column"/>
+            <TextBox x:Name="colBox" Width="50"/>
+            <Button x:Name="applyBtn" Content="Apply" Width="50"/>
+        </StackPanel>
+        
     </Grid>
 </Window>
