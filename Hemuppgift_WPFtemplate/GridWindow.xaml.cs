@@ -23,5 +23,29 @@ namespace Hemuppgift_WPFtemplate
         {
             InitializeComponent();
         }
+
+        private void applyBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int row = Convert.ToInt32(rowBox.Text);
+            int col = Convert.ToInt32(colBox.Text);
+            Button greenBtn = new Button();
+
+            if (row < 0 || row > 3 || col < 0 || col > 3)
+            {
+                MessageBox.Show("Du är utanför fönstret!");
+            }
+            else
+            {
+                greenBtn.Content = "Row " + row + " Column " + col;
+                //greenBtn.Width = 100;
+                //greenBtn.Height = 70;
+                greenBtn.Background = new SolidColorBrush(Colors.LightGreen);
+
+                Grid.SetRow(greenBtn, row);
+                Grid.SetColumn(greenBtn, col);
+
+                MainGrid.Children.Add(greenBtn);
+            }
+        }
     }
 }
