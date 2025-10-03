@@ -18,5 +18,17 @@ namespace Hemuppgift_WPFtemplate
             GridWindow gridwindow = new GridWindow();
             gridwindow.Show();
         }
+
+        private void stackPanelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            StackPanelWindow stackPanelWindow = new StackPanelWindow();
+            stackPanelWindow.Show();
+        }
+
+        private void wrapPanelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WrapPanelWindow wrapPanelWindow = new WrapPanelWindow();
+            wrapPanelWindow.Show();
+        }
     }
 }
