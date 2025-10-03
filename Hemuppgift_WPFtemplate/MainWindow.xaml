@@ -18,7 +18,7 @@
         <Button x:Name="gridBtn" Content="Grid" Grid.Column="0" Grid.Row="0" Click="gridBtn_Click"/>
         <Button x:Name="stackPanelBtn" Content="StackPanel" Grid.Column="1" Grid.Row="0" Click="stackPanelBtn_Click"/>
         <Button x:Name="wrapPanelBtn" Content="WrapPanel" Grid.Column="0" Grid.Row="1" Click="wrapPanelBtn_Click"/>
-        <Button x:Name="dockPanelBtn" Content="DockPanel" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="dockPanelBtn" Content="DockPanel" Grid.Column="1" Grid.Row="1" Click="dockPanelBtn_Click"/>
 
     </Grid>
 </Window>
