@@ -27,22 +27,13 @@ namespace Hemuppgift_WPFtemplate
         private void btnCenter_Click(object sender, RoutedEventArgs e)
         {
 
-            Image image = new Image
-            {
-                Source = new BitmapImage(new Uri("C:\\Users\\larre\\Source\\Repos\\hemuppgift - wpf - EmilAlexLarsson\\Hemuppgift_WPFtemplate\\TrophyImage.jpg")),
-                Width = 300,
-                Height = 300
-            };
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri("C:\\Users\\larre\\Source\\Repos\\hemuppgift-wpf-EmilAlexLarsson\\Hemuppgift_WPFtemplate\\TrophyImage.jpg"));
+            image.Height = 300;
+            image.Width = 300;
 
-            Grid.SetRow(image, Grid.GetRow(btnCenter));
-            Grid.SetColumn(image, Grid.GetColumn(btnCenter));
-
-            if (mainDockpanel != null)
-            {
-                mainDockpanel.Children.Remove(btnCenter);
-                mainDockpanel.Children.Add(image);
-                //image.Source = new BitmapImage(new Uri(TrophyImage.jpg));
-            }
+            mainDockpanel.Children.Remove(btnCenter);
+            mainDockpanel.Children.Add(image);
         }
     }
 }
