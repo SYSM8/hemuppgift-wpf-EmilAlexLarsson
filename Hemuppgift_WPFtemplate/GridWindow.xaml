@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Hemuppgift_WPFtemplate"
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
-    <Grid x:Name="MainGrid">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <TextBlock Text="Row"/>
             <TextBox x:Name="rowBox" Width="50"/>
@@ -14,8 +19,9 @@
             <TextBox x:Name="colBox" Width="50"/>
             <Button x:Name="applyBtn" Content="Apply" Width="50" Click="applyBtn_Click"/>
         </StackPanel>
-        
-        <Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" x:Name ="MainGrid">
+            <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -27,6 +33,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        </Grid>
 
     </Grid>
 </Window>
